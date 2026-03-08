@@ -424,6 +424,7 @@
   </script>
 </head>
 <body>
+<script src="components/components.js"></script>
 
 <div id="nav-placeholder"></div>
     <a href="salesforce.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;">&#9729;&#65039;&nbsp; Salesforce</a>
@@ -474,43 +475,6 @@
 <div id="footer-placeholder"></div>
 
 <div id="ve-placeholder"></div>
-
-
-<script>
-// ── COMPONENT LOADER ──
-(function() {
-  function load(id, file) {
-    fetch(file)
-      .then(function(r) { return r.text(); })
-      .then(function(html) {
-        var el = document.getElementById(id);
-        if (!el) return;
-        var tmp = document.createElement('div');
-        tmp.innerHTML = html;
-        // Execute any scripts inside the component
-        tmp.querySelectorAll('script').forEach(function(s) {
-          var ns = document.createElement('script');
-          ns.textContent = s.textContent;
-          document.head.appendChild(ns);
-        });
-        // Insert styles
-        tmp.querySelectorAll('style').forEach(function(s) {
-          document.head.appendChild(s.cloneNode(true));
-        });
-        // Insert non-script, non-style nodes
-        Array.from(tmp.childNodes).forEach(function(node) {
-          if (node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
-            el.appendChild(node.cloneNode(true));
-          }
-        });
-      })
-      .catch(function(e) { console.warn('Component load failed:', file, e); });
-  }
-  load('nav-placeholder', 'components/nav.html');
-  load('footer-placeholder', 'components/footer.html');
-  load('ve-placeholder', 'components/ve-bot.html');
-})();
-</script>
 
 </body>
 </html>
