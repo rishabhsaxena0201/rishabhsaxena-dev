@@ -592,7 +592,7 @@ section[style*="background:#0A1F44"] .section-label::before { background: #7ec8f
         <a href="in-the-making.html">🛠️&nbsp; In the Making</a>
       </div>
     </div>
-    <a href="#connect">Connect</a>
+    <a href="#connect" onclick="event.preventDefault();document.getElementById('connect').scrollIntoView({behavior:'smooth'})">Connect</a>
   </div>
   <div class="nav-right">
     <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙 Dark Mode</button>
@@ -617,7 +617,7 @@ section[style*="background:#0A1F44"] .section-label::before { background: #7ec8f
     <div style="font-size:0.68rem;font-family:'Sora',sans-serif;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--sf-blue);padding:10px 24px 4px 40px;">Projects</div>
     <a href="in-the-making.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;">&#128736;&#65039;&nbsp; In the Making</a>
   </div>
-  <a href="#connect" onclick="toggleMenu()" style="display:block;padding:16px 24px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:1rem;">Connect</a>
+  <a href="#connect" onclick="toggleMenu();setTimeout(()=>document.getElementById('connect').scrollIntoView({behavior:'smooth'}),300)" style="display:block;padding:16px 24px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:1rem;">Connect</a>
 </div>
 
 
@@ -986,7 +986,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div style="font-size:2.5rem;margin-bottom:16px;">🔬</div>
     <h3 style="font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:800;margin-bottom:10px;">In the Making</h3>
     <p style="color:var(--sf-subtext);font-size:0.9rem;line-height:1.7;margin-bottom:20px;">A few tools are quietly being built. Nothing to announce just yet — but they're coming.</p>
-    <a href="#connect" style="background:var(--sf-blue);color:white;padding:11px 24px;border-radius:8px;text-decoration:none;font-family:'Sora',sans-serif;font-weight:700;font-size:0.88rem;">Stay in the Loop</a>
+    <a href="#connect" onclick="event.preventDefault();document.getElementById('connect').scrollIntoView({behavior:'smooth'})"  style="background:var(--sf-blue);color:white;padding:11px 24px;border-radius:8px;text-decoration:none;font-family:'Sora',sans-serif;font-weight:700;font-size:0.88rem;">Stay in the Loop</a>
   </div>
 </div>
 

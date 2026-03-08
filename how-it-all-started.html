@@ -99,6 +99,123 @@
 .fade-in-2 { animation: fadeIn 0.7s ease 0.1s both; }
 .fade-in-3 { animation: fadeIn 0.7s ease 0.2s both; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+/* ── ARTICLE HERO ── */
+.article-hero {
+  background: var(--sf-navy);
+  padding: 60px 5% 70px;
+  position: relative;
+  overflow: hidden;
+}
+.article-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(27,150,255,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.article-hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+}
+.article-section-label {
+  font-family: 'Sora', sans-serif;
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--sf-electric); margin-bottom: 16px;
+}
+.article-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+.article-subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.65);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.article-meta-row {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.article-meta-item {
+  font-family: 'Sora', sans-serif;
+  font-size: 0.78rem; font-weight: 500;
+  color: rgba(255,255,255,0.55);
+}
+.meta-dot {
+  width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,0.3);
+}
+
+/* ── ARTICLE BODY ── */
+.article-body-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 60px 5% 80px;
+}
+.article-body {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--sf-text);
+}
+.article-body p {
+  margin-bottom: 1.6em;
+}
+.article-body strong {
+  font-weight: 600;
+  color: var(--sf-navy);
+}
+[data-theme="dark"] .article-body strong {
+  color: var(--sf-electric);
+}
+
+/* ── ARTICLE IMAGE ── */
+.article-image-wrap {
+  margin: 40px 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+}
+.article-image-wrap img {
+  width: 100%; height: auto; display: block;
+}
+.article-image-caption {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--sf-subtext);
+  margin-top: 10px;
+  margin-bottom: 32px;
+  font-style: italic;
+}
+
+/* ── ARTICLE DIVIDER ── */
+.article-divider {
+  width: 60px; height: 3px;
+  background: var(--sf-electric);
+  border-radius: 2px;
+  margin: 48px auto;
+}
+
+/* ── BACK LINK ── */
+.back-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.78rem; font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+  transition: color 0.2s;
+}
+.back-link:hover { color: #fff; }
+.back-link::before { content: '←'; font-size: 0.9rem; }
+
 </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGYJHP2512"></script>
@@ -136,7 +253,7 @@
         <a href="in-the-making.html">🛠️&nbsp; In the Making</a>
       </div>
     </div>
-    <a href="#connect">Connect</a>
+    <a href="#connect" onclick="event.preventDefault();document.getElementById('connect').scrollIntoView({behavior:'smooth'})">Connect</a>
   </div>
   <div class="nav-right">
     <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙 Dark Mode</button>
@@ -158,7 +275,7 @@
     <a href="open-tabs.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;">Open Tabs</a>
     <a href="in-the-making.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;">🛠️&nbsp; In the Making</a>
   </div>
-  <a href="#connect" onclick="toggleMenu()" style="display:block;padding:16px 24px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:1rem;">Connect</a>
+  <a href="#connect" onclick="toggleMenu();setTimeout(()=>document.getElementById('connect').scrollIntoView({behavior:'smooth'}),300)" style="display:block;padding:16px 24px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:1rem;">Connect</a>
 </div>
 
 <!-- ARTICLE HERO -->
