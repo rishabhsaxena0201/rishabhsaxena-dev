@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <base href="/rishabhsaxena-dev/">
-  <link rel="stylesheet" href="styles.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
 <title>About | Rishabh Saxena</title>
-<meta name="description" content="Rishabh Saxena — Salesforce Consultant, problem solver, motorsport marshal, watch enthusiast. Full professional profile, experience, certifications and background.">
+<meta name="description" content="Rishabh Saxena — Salesforce Consultant, problem solver, motorsport marshal, watch enthusiast. Full professional profile, experience, certifications and...">
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://rishabhsaxena.co.in/about.html">
+  <meta property="og:title"       content="About | Rishabh Saxena">
+  <meta property="og:description" content="Rishabh Saxena — Salesforce Consultant, problem solver, motorsport marshal, watch enthusiast. Full professional profile, experience, certifications and...">
+  <meta property="og:image"       content="https://rishabhsaxena.co.in/photo.png">
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="About | Rishabh Saxena">
+  <meta name="twitter:description" content="Rishabh Saxena — Salesforce Consultant, problem solver, motorsport marshal, watch enthusiast. Full professional profile, experience, certifications and...">
+  <meta name="twitter:image"       content="https://rishabhsaxena.co.in/photo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<link rel="icon" href="logo.png" type="image/png">
+<link rel="icon" href="/logo.png" type="image/png">
 <style>
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--sf-light-bg);
-  color: var(--sf-text);
-  transition: background 0.3s, color 0.3s;
-  line-height: 1.7;
-}
+html { scroll-behavior: smooth; }
 
 /* ── PAGE LAYOUT ── */
 body { padding-top: 68px; }
@@ -144,8 +148,9 @@ body { padding-top: 68px; }
 .connect-options { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 28px; }
 
 /* ── ANIMATIONS ── */
-
- }
+.fade-in { animation: fadeIn 0.6s ease both; }
+.fade-in-2 { animation: fadeIn 0.6s ease 0.15s both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
 /* ── VIRTUAL EXEC BOT ── */
 .ve-bubble {
@@ -243,6 +248,10 @@ footer span { color: #1B96FF; }
   font-weight: 300;
   line-height: 1.7;
 }
+@media (max-width: 768px) {
+}
+[data-theme="dark"] .nav-center.open { background: #132d56 !important; }
+/* ── END NAV ── */
 
 /* ── NAVY SECTIONS (About, What I Do, Education) ── */
 /* These always use fixed light colours regardless of dark/light mode */
@@ -591,24 +600,24 @@ section[style*="background:#0A1F44"] .section-label::before { background: #7ec8f
 <body>
 
 <nav>
-  <div class="nav-logo"><a href="index.html"><img src="logo.png" alt="RS Logo" width="44" height="44"></a></div>
+  <div class="nav-logo"><a href="/"><img src="/logo.png" alt="RS Logo" width="44" height="44"></a></div>
   <div class="nav-center" id="navCenter">
-    <a href="index.html">Home</a>
-    <a href="about.html" style="color:var(--sf-blue);font-weight:700;">About</a>
+    <a href="/">Home</a>
+    <a href="/about.html" style="color:var(--sf-blue);font-weight:700;">About</a>
     <div class="nav-item" id="navThinkingLab">
       <a class="has-dropdown" onclick="toggleMobileDropdown(this)">Thinking Lab</a>
       <div class="dropdown" id="thinkingLabDropdown">
         <div style="font-size:0.68rem;font-family:'Sora',sans-serif;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--sf-blue);padding:8px 20px 4px;cursor:default;">Blog</div>
-        <a href="salesforce.html">☁️&nbsp; Salesforce</a>
-        <a href="hands-on-wrist.html"><svg id="watch-navabout" viewBox="0 0 44 56" width="18" height="22" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:8px;flex-shrink:0;"><rect x="14" y="1" width="16" height="9" rx="3" fill="var(--sf-subtext)" opacity="0.6"/><rect x="14" y="46" width="16" height="9" rx="3" fill="var(--sf-subtext)" opacity="0.6"/><circle cx="22" cy="28" r="17" fill="var(--sf-subtext)" opacity="0.25"/><circle cx="22" cy="28" r="14" fill="var(--watch-dial,#ffffff)"/><g id="watch-navabout-hour"><line x1="22" y1="28" x2="22" y2="22" stroke="var(--sf-text,#0A1F44)" stroke-width="2.5" stroke-linecap="round"/></g><g id="watch-navabout-min"><line x1="22" y1="28" x2="22" y2="17" stroke="var(--sf-text,#0A1F44)" stroke-width="1.5" stroke-linecap="round"/></g><circle cx="22" cy="28" r="1.8" fill="var(--sf-blue,#1B96FF)"/></svg> Hands on Wrist</a>
-        <a href="hands-on-wheels.html"><svg viewBox="10 10 80 80" width="18" height="18" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:8px;flex-shrink:0;"><circle cx="50" cy="50" r="38" fill="none" stroke="var(--sf-subtext)" stroke-width="7"/><line x1="50" y1="50" x2="17" y2="31" stroke="var(--sf-subtext)" stroke-width="5" stroke-linecap="round"/><line x1="50" y1="50" x2="83" y2="31" stroke="var(--sf-subtext)" stroke-width="5" stroke-linecap="round"/><line x1="50" y1="50" x2="50" y2="88" stroke="var(--sf-subtext)" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="50" r="9" fill="var(--sf-card,#fff)" stroke="var(--sf-subtext)" stroke-width="2.5"/><circle cx="50" cy="50" r="5.5" fill="#C0392B"/><circle cx="50" cy="50" r="3.5" fill="#E74C3C"/><path d="M10 38 Q7 30 12 24 Q17 19 23 23 Q26 26 24 32 Q22 37 17 39 Q13 40 10 38Z" fill="var(--sf-subtext)" opacity="0.85"/><path d="M90 38 Q93 30 88 24 Q83 19 77 23 Q74 26 76 32 Q78 37 83 39 Q87 40 90 38Z" fill="var(--sf-subtext)" opacity="0.85"/></svg> Hands on Wheels</a>
-        <a href="open-tabs.html"><svg viewBox="7 9 47 54" width="18" height="18" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:8px;flex-shrink:0;"><rect x="8" y="10" width="38" height="48" rx="3" fill="var(--sf-tag-bg,#E8EEF4)" stroke="var(--sf-subtext)" stroke-width="2.5"/><rect x="5" y="16" width="6" height="4" rx="2" fill="none" stroke="var(--sf-subtext)" stroke-width="1.8"/><rect x="5" y="26" width="6" height="4" rx="2" fill="none" stroke="var(--sf-subtext)" stroke-width="1.8"/><rect x="5" y="36" width="6" height="4" rx="2" fill="none" stroke="var(--sf-subtext)" stroke-width="1.8"/><line x1="16" y1="22" x2="40" y2="22" stroke="var(--sf-subtext)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><line x1="16" y1="30" x2="40" y2="30" stroke="var(--sf-subtext)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><line x1="16" y1="38" x2="34" y2="38" stroke="var(--sf-subtext)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><rect x="30" y="38" width="5" height="18" rx="2" fill="var(--sf-blue,#1B96FF)" transform="rotate(-35 32 46)"/><polygon points="0,0 4,0 2,5" fill="var(--sf-subtext)" transform="translate(37,51) rotate(-35)"/></svg> Open Tabs</a>
+        <a href="/salesforce.html">☁️&nbsp; Salesforce</a>
+        <a href="/hands-on-wrist.html"><svg id="watch-navabout" viewBox="0 0 44 56" width="18" height="22" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:8px;flex-shrink:0;"><rect x="14" y="1" width="16" height="9" rx="3" fill="var(--sf-subtext)" opacity="0.6"/><rect x="14" y="46" width="16" height="9" rx="3" fill="var(--sf-subtext)" opacity="0.6"/><circle cx="22" cy="28" r="17" fill="var(--sf-subtext)" opacity="0.25"/><circle cx="22" cy="28" r="14" fill="var(--watch-dial,#ffffff)"/><g id="watch-navabout-hour"><line x1="22" y1="28" x2="22" y2="22" stroke="var(--sf-text,#0A1F44)" stroke-width="2.5" stroke-linecap="round"/></g><g id="watch-navabout-min"><line x1="22" y1="28" x2="22" y2="17" stroke="var(--sf-text,#0A1F44)" stroke-width="1.5" stroke-linecap="round"/></g><circle cx="22" cy="28" r="1.8" fill="var(--sf-blue,#1B96FF)"/></svg> Hands on Wrist</a>
+        <a href="/hands-on-wheels.html"><svg viewBox="10 10 80 80" width="18" height="18" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:8px;flex-shrink:0;"><circle cx="50" cy="50" r="38" fill="none" stroke="var(--sf-subtext)" stroke-width="7"/><line x1="50" y1="50" x2="17" y2="31" stroke="var(--sf-subtext)" stroke-width="5" stroke-linecap="round"/><line x1="50" y1="50" x2="83" y2="31" stroke="var(--sf-subtext)" stroke-width="5" stroke-linecap="round"/><line x1="50" y1="50" x2="50" y2="88" stroke="var(--sf-subtext)" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="50" r="9" fill="var(--sf-card,#fff)" stroke="var(--sf-subtext)" stroke-width="2.5"/><circle cx="50" cy="50" r="5.5" fill="#C0392B"/><circle cx="50" cy="50" r="3.5" fill="#E74C3C"/><path d="M10 38 Q7 30 12 24 Q17 19 23 23 Q26 26 24 32 Q22 37 17 39 Q13 40 10 38Z" fill="var(--sf-subtext)" opacity="0.85"/><path d="M90 38 Q93 30 88 24 Q83 19 77 23 Q74 26 76 32 Q78 37 83 39 Q87 40 90 38Z" fill="var(--sf-subtext)" opacity="0.85"/></svg> Hands on Wheels</a>
+        <a href="/open-tabs.html"><svg viewBox="7 9 47 54" width="18" height="18" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:8px;flex-shrink:0;"><rect x="8" y="10" width="38" height="48" rx="3" fill="var(--sf-tag-bg,#E8EEF4)" stroke="var(--sf-subtext)" stroke-width="2.5"/><rect x="5" y="16" width="6" height="4" rx="2" fill="none" stroke="var(--sf-subtext)" stroke-width="1.8"/><rect x="5" y="26" width="6" height="4" rx="2" fill="none" stroke="var(--sf-subtext)" stroke-width="1.8"/><rect x="5" y="36" width="6" height="4" rx="2" fill="none" stroke="var(--sf-subtext)" stroke-width="1.8"/><line x1="16" y1="22" x2="40" y2="22" stroke="var(--sf-subtext)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><line x1="16" y1="30" x2="40" y2="30" stroke="var(--sf-subtext)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><line x1="16" y1="38" x2="34" y2="38" stroke="var(--sf-subtext)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><rect x="30" y="38" width="5" height="18" rx="2" fill="var(--sf-blue,#1B96FF)" transform="rotate(-35 32 46)"/><polygon points="0,0 4,0 2,5" fill="var(--sf-subtext)" transform="translate(37,51) rotate(-35)"/></svg> Open Tabs</a>
         <div style="height:1px;background:var(--sf-border);margin:6px 0;"></div>
         <div style="font-size:0.68rem;font-family:'Sora',sans-serif;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--sf-blue);padding:8px 20px 4px;cursor:default;">Projects</div>
-        <a href="in-the-making.html">🛠️&nbsp; In the Making</a>
+        <a href="/in-the-making.html">🛠️&nbsp; In the Making</a>
       </div>
     </div>
-    <a href="#connect" onclick="event.preventDefault();document.getElementById('connect').scrollIntoView({behavior:'smooth'})" >Connect</a>
+    <a href="#connect">Connect</a>
   </div>
   <div class="nav-right">
     <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙 Dark Mode</button>
@@ -620,20 +629,20 @@ section[style*="background:#0A1F44"] .section-label::before { background: #7ec8f
 
 <!-- MOBILE MENU -->
 <div id="mobileMenuOverlay" style="display:none;position:fixed;top:68px;left:0;right:0;bottom:0;z-index:9998;background:var(--sf-card);border-top:1px solid var(--sf-border);overflow-y:auto;flex-direction:column;">
-  <a href="index.html" style="display:block;padding:16px 24px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:1rem;">Home</a>
-  <a href="about.html" style="display:block;padding:16px 24px;border-bottom:1px solid var(--sf-border);color:var(--sf-blue);font-weight:700;text-decoration:none;font-size:1rem;">About</a>
+  <a href="/" style="display:block;padding:16px 24px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:1rem;">Home</a>
+  <a href="/about.html" style="display:block;padding:16px 24px;border-bottom:1px solid var(--sf-border);color:var(--sf-blue);font-weight:700;text-decoration:none;font-size:1rem;">About</a>
   <button onclick="toggleLabMenu()" style="width:100%;padding:16px 24px;border:none;border-bottom:1px solid var(--sf-border);background:none;color:var(--sf-text);font-size:1rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;">Thinking Lab <span>&#9662;</span></button>
   <div id="mobileLabMenu" style="display:none;background:var(--sf-light-bg);">
     <div style="font-size:0.68rem;font-family:'Sora',sans-serif;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--sf-blue);padding:10px 24px 4px 40px;">Blog</div>
-    <a href="salesforce.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;">&#9729;&#65039;&nbsp; Salesforce</a>
-    <a href="hands-on-wrist.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;"><svg id="watch-navabout-mob" viewBox="0 0 44 56" width="18" height="22" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:8px;flex-shrink:0;"><rect x="14" y="1" width="16" height="9" rx="3" fill="var(--sf-subtext)" opacity="0.6"/><rect x="14" y="46" width="16" height="9" rx="3" fill="var(--sf-subtext)" opacity="0.6"/><circle cx="22" cy="28" r="17" fill="var(--sf-subtext)" opacity="0.25"/><circle cx="22" cy="28" r="14" fill="var(--watch-dial,#ffffff)"/><g id="watch-navabout-mob-hour"><line x1="22" y1="28" x2="22" y2="22" stroke="var(--sf-text,#0A1F44)" stroke-width="2.5" stroke-linecap="round"/></g><g id="watch-navabout-mob-min"><line x1="22" y1="28" x2="22" y2="17" stroke="var(--sf-text,#0A1F44)" stroke-width="1.5" stroke-linecap="round"/></g><circle cx="22" cy="28" r="1.8" fill="var(--sf-blue,#1B96FF)"/></svg> Hands on Wrist</a>
-    <a href="hands-on-wheels.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;"><svg viewBox="10 10 80 80" width="18" height="18" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:8px;flex-shrink:0;"><circle cx="50" cy="50" r="38" fill="none" stroke="var(--sf-subtext)" stroke-width="7"/><line x1="50" y1="50" x2="17" y2="31" stroke="var(--sf-subtext)" stroke-width="5" stroke-linecap="round"/><line x1="50" y1="50" x2="83" y2="31" stroke="var(--sf-subtext)" stroke-width="5" stroke-linecap="round"/><line x1="50" y1="50" x2="50" y2="88" stroke="var(--sf-subtext)" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="50" r="9" fill="var(--sf-card,#fff)" stroke="var(--sf-subtext)" stroke-width="2.5"/><circle cx="50" cy="50" r="5.5" fill="#C0392B"/><circle cx="50" cy="50" r="3.5" fill="#E74C3C"/><path d="M10 38 Q7 30 12 24 Q17 19 23 23 Q26 26 24 32 Q22 37 17 39 Q13 40 10 38Z" fill="var(--sf-subtext)" opacity="0.85"/><path d="M90 38 Q93 30 88 24 Q83 19 77 23 Q74 26 76 32 Q78 37 83 39 Q87 40 90 38Z" fill="var(--sf-subtext)" opacity="0.85"/></svg> Hands on Wheels</a>
-    <a href="open-tabs.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;"><svg viewBox="7 9 47 54" width="18" height="18" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:8px;flex-shrink:0;"><rect x="8" y="10" width="38" height="48" rx="3" fill="var(--sf-tag-bg,#E8EEF4)" stroke="var(--sf-subtext)" stroke-width="2.5"/><rect x="5" y="16" width="6" height="4" rx="2" fill="none" stroke="var(--sf-subtext)" stroke-width="1.8"/><rect x="5" y="26" width="6" height="4" rx="2" fill="none" stroke="var(--sf-subtext)" stroke-width="1.8"/><rect x="5" y="36" width="6" height="4" rx="2" fill="none" stroke="var(--sf-subtext)" stroke-width="1.8"/><line x1="16" y1="22" x2="40" y2="22" stroke="var(--sf-subtext)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><line x1="16" y1="30" x2="40" y2="30" stroke="var(--sf-subtext)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><line x1="16" y1="38" x2="34" y2="38" stroke="var(--sf-subtext)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><rect x="30" y="38" width="5" height="18" rx="2" fill="var(--sf-blue,#1B96FF)" transform="rotate(-35 32 46)"/><polygon points="0,0 4,0 2,5" fill="var(--sf-subtext)" transform="translate(37,51) rotate(-35)"/></svg> Open Tabs</a>
+    <a href="/salesforce.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;">&#9729;&#65039;&nbsp; Salesforce</a>
+    <a href="/hands-on-wrist.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;"><svg id="watch-navabout-mob" viewBox="0 0 44 56" width="18" height="22" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:8px;flex-shrink:0;"><rect x="14" y="1" width="16" height="9" rx="3" fill="var(--sf-subtext)" opacity="0.6"/><rect x="14" y="46" width="16" height="9" rx="3" fill="var(--sf-subtext)" opacity="0.6"/><circle cx="22" cy="28" r="17" fill="var(--sf-subtext)" opacity="0.25"/><circle cx="22" cy="28" r="14" fill="var(--watch-dial,#ffffff)"/><g id="watch-navabout-mob-hour"><line x1="22" y1="28" x2="22" y2="22" stroke="var(--sf-text,#0A1F44)" stroke-width="2.5" stroke-linecap="round"/></g><g id="watch-navabout-mob-min"><line x1="22" y1="28" x2="22" y2="17" stroke="var(--sf-text,#0A1F44)" stroke-width="1.5" stroke-linecap="round"/></g><circle cx="22" cy="28" r="1.8" fill="var(--sf-blue,#1B96FF)"/></svg> Hands on Wrist</a>
+    <a href="/hands-on-wheels.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;"><svg viewBox="10 10 80 80" width="18" height="18" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:8px;flex-shrink:0;"><circle cx="50" cy="50" r="38" fill="none" stroke="var(--sf-subtext)" stroke-width="7"/><line x1="50" y1="50" x2="17" y2="31" stroke="var(--sf-subtext)" stroke-width="5" stroke-linecap="round"/><line x1="50" y1="50" x2="83" y2="31" stroke="var(--sf-subtext)" stroke-width="5" stroke-linecap="round"/><line x1="50" y1="50" x2="50" y2="88" stroke="var(--sf-subtext)" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="50" r="9" fill="var(--sf-card,#fff)" stroke="var(--sf-subtext)" stroke-width="2.5"/><circle cx="50" cy="50" r="5.5" fill="#C0392B"/><circle cx="50" cy="50" r="3.5" fill="#E74C3C"/><path d="M10 38 Q7 30 12 24 Q17 19 23 23 Q26 26 24 32 Q22 37 17 39 Q13 40 10 38Z" fill="var(--sf-subtext)" opacity="0.85"/><path d="M90 38 Q93 30 88 24 Q83 19 77 23 Q74 26 76 32 Q78 37 83 39 Q87 40 90 38Z" fill="var(--sf-subtext)" opacity="0.85"/></svg> Hands on Wheels</a>
+    <a href="/open-tabs.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;"><svg viewBox="7 9 47 54" width="18" height="18" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:8px;flex-shrink:0;"><rect x="8" y="10" width="38" height="48" rx="3" fill="var(--sf-tag-bg,#E8EEF4)" stroke="var(--sf-subtext)" stroke-width="2.5"/><rect x="5" y="16" width="6" height="4" rx="2" fill="none" stroke="var(--sf-subtext)" stroke-width="1.8"/><rect x="5" y="26" width="6" height="4" rx="2" fill="none" stroke="var(--sf-subtext)" stroke-width="1.8"/><rect x="5" y="36" width="6" height="4" rx="2" fill="none" stroke="var(--sf-subtext)" stroke-width="1.8"/><line x1="16" y1="22" x2="40" y2="22" stroke="var(--sf-subtext)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><line x1="16" y1="30" x2="40" y2="30" stroke="var(--sf-subtext)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><line x1="16" y1="38" x2="34" y2="38" stroke="var(--sf-subtext)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><rect x="30" y="38" width="5" height="18" rx="2" fill="var(--sf-blue,#1B96FF)" transform="rotate(-35 32 46)"/><polygon points="0,0 4,0 2,5" fill="var(--sf-subtext)" transform="translate(37,51) rotate(-35)"/></svg> Open Tabs</a>
     <div style="height:1px;background:var(--sf-border);margin:4px 0;"></div>
     <div style="font-size:0.68rem;font-family:'Sora',sans-serif;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--sf-blue);padding:10px 24px 4px 40px;">Projects</div>
-    <a href="in-the-making.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;">&#128736;&#65039;&nbsp; In the Making</a>
+    <a href="/in-the-making.html" style="display:block;padding:12px 24px 12px 40px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:0.9rem;">&#128736;&#65039;&nbsp; In the Making</a>
   </div>
-  <a href="#connect" onclick="toggleMenu();setTimeout(()=>document.getElementById('connect').scrollIntoView({behavior:'smooth'}),300)" style="display:block;padding:16px 24px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:1rem;">Connect</a>
+  <a href="#connect" onclick="toggleMenu()" style="display:block;padding:16px 24px;border-bottom:1px solid var(--sf-border);color:var(--sf-text);text-decoration:none;font-size:1rem;">Connect</a>
 </div>
 
 
@@ -644,10 +653,10 @@ section[style*="background:#0A1F44"] .section-label::before { background: #7ec8f
     <div style="font-family:'Sora',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--sf-blue);margin-bottom:12px;display:flex;align-items:center;gap:10px;"><span style="display:block;width:32px;height:2px;background:var(--sf-blue);"></span>Full Profile</div>
     <h1 style="font-family:'Sora',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;">The Professional<br><span style="color:var(--sf-blue);">Story</span></h1>
     <div style="width:48px;height:3px;background:var(--sf-blue);border-radius:2px;margin-bottom:20px;"></div>
-    <p style="color:var(--sf-subtext);font-size:1rem;font-weight:300;max-width:560px;line-height:1.7;">Nearly a decade across the Salesforce ecosystem — from writing code to closing deals. Here's the full picture.</p>
+    <p style="color:var(--sf-subtext);font-size:1rem;font-weight:300;max-width:560px;line-height:1.7;">A decade across the Salesforce ecosystem — from writing code to closing deals. Here's the full picture.</p>
   </div>
   <div style="flex-shrink:0;">
-    <img src="photo.png" alt="Rishabh Saxena" style="width:340px;height:400px;object-fit:cover;object-position:top;border-radius:20px;box-shadow:0 20px 60px rgba(0,112,210,0.2);">
+    <img src="/photo.png" alt="Rishabh Saxena" style="width:340px;height:400px;object-fit:cover;object-position:top;border-radius:20px;box-shadow:0 20px 60px rgba(0,112,210,0.2);">
   </div>
 </div>
 
@@ -658,19 +667,19 @@ section[style*="background:#0A1F44"] .section-label::before { background: #7ec8f
         <div class="section-label">About Me</div>
         <h2 class="section-title">From Developer to Deal-Maker</h2>
         <div class="section-divider"></div>
-        <p>Rishabh started his career as a <strong>Salesforce Technical Analyst at TCS in 2016</strong> — writing code, managing incidents, and figuring out how Salesforce actually works under the hood. What he discovered along the way was that his real strength wasn't in building the product. It was in explaining it, positioning it, and helping clients see its value.</p>
-        <p>That realisation led him to <strong>Presales</strong> — and he never looked back. Over the next several years, he worked across TCS, Brillio, and LTIMindtree, shaping Salesforce solutions for clients across Finance, Automobile, Realty, Hospitality, and Retail sectors, spanning EMEA, APAC, and the US.</p>
-        <p>Today, Rishabh works at <strong>Salesforce Professional Services</strong> as a Salesforce Consultant, helping grow the Data Cloud, Marketing Cloud, and RCG Cloud implementation business across India — collaborating with C-suite stakeholders, building winning proposals, and connecting the right solutions to the right problems.</p>
+        <p>Rishabh started his career as a <strong>Salesforce Technical Analyst at TCS in 2016</strong> — writing code, managing incidents, and figuring out how Salesforce actually works under the hood. As he progressed through delivery and client engagements, he found himself drawn more to the conversations happening upstream — shaping solutions, translating business problems into technology answers, and helping clients see what was possible.</p>
+        <p>That natural progression took him into <strong>Presales</strong>, where he found his stride. Over the next several years, he worked across TCS, Brillio, and LTIMindtree, shaping Salesforce solutions for clients across Finance, Automobile, Realty, Hospitality, and Retail sectors, spanning EMEA, APAC, and the US.</p>
+        <p>Today, Rishabh works at <strong>Salesforce Professional Services</strong> as an Engagement Manager, helping grow the Data Cloud, Marketing Cloud, and RCG Cloud — along with Salesforce core — implementation business across India — collaborating with C-suite stakeholders, building winning proposals, and connecting the right solutions to the right problems.</p>
         <p>He also holds an <strong>MBA in Marketing, AI & Machine Learning</strong> from Great Lakes Institute of Management — bringing both technical grounding and a sharp commercial lens to every Salesforce conversation.</p>
       </div>
       <div class="fade-in-2">
         <div class="highlight-card">
           <h4>🌍 The TCS Middle East Milestone</h4>
-          <p>During his time at TCS, Rishabh contributed to expanding the Salesforce practice into the EMEA region — collaborating with cross-domain teams to drive growth and helping establish TCS's Salesforce presence in new geographies.</p>
+          <p>During his time at TCS, Rishabh played a key role in helping the Salesforce practice acquire its first logo in the Middle East — a significant milestone that established TCS's Salesforce footprint in the region.</p>
         </div>
         <div class="highlight-card">
           <h4>📈 Growing PS India's Pipeline</h4>
-          <p>At Salesforce Professional Services, Rishabh single-handedly managed Data Cloud, Marketing Cloud, and RCG Cloud deals and helped acquire three new logos for PS India — from discovery to commercial close.</p>
+          <p>At Salesforce Professional Services, Rishabh managed Data Cloud, Marketing Cloud, RCG Cloud, and Salesforce core deals end-to-end — and helped acquire three new logos for PS India from discovery to commercial close.</p>
         </div>
         <div class="highlight-card">
           <h4>🎓 Research & Curiosity</h4>
@@ -688,7 +697,7 @@ section[style*="background:#0A1F44"] .section-label::before { background: #7ec8f
       <h2 class="section-title">The Journey So Far</h2>
       <div class="section-divider"></div>
     </div>
-    <img src="logo.png" alt="RS Logo" style="width:72px;height:72px;border-radius:50%;flex-shrink:0;margin-top:4px;opacity:0.9;">
+    <img src="/logo.png" alt="RS Logo" style="width:72px;height:72px;border-radius:50%;flex-shrink:0;margin-top:4px;opacity:0.9;">
   </div>
   <div class="stack-container">
 
@@ -752,7 +761,7 @@ section[style*="background:#0A1F44"] .section-label::before { background: #7ec8f
         <div class="stack-body">
           <div class="stack-company">Tata Consultancy Services</div>
           <div class="stack-role">Salesforce Developer → Presales Consultant</div>
-          <p class="stack-desc">Joined TCS as an Assistant Software Engineer in 2016, working as a Salesforce Developer — leading a team of three in IT operations, reducing daily incident volume from 100+ to under 30 through root cause analysis, and handling end-to-end Salesforce Sales Cloud development.</p>
+          <p class="stack-desc">Joined TCS as an Assistant Software Engineer in 2016, working as a Salesforce Developer — reducing daily incident volume from 100+ to under 30 through root cause analysis, and handling end-to-end Salesforce Sales Cloud development.</p>
           <div class="sabbatical-box">
             <div class="sabbatical-label">📚 Sabbatical · May 2018 – April 2019</div>
             <p style="font-size:0.92rem;color:var(--sf-text);font-weight:400;margin:0;">Stepped away from TCS for higher studies — completed a one-year <strong>MBA in Marketing, AI & Machine Learning</strong> from Great Lakes Institute of Management, Chennai. Thesis on the effect of nostalgia on consumer buying behaviour across industries.</p>
@@ -874,8 +883,6 @@ section[style*="background:#0A1F44"] .section-label::before { background: #7ec8f
 
 <!-- CONNECT -->
 
-</div>
-
 <section id="connect" class="connect-bg">
   <div class="connect-inner">
     <div class="section-label">Get In Touch</div>
@@ -992,6 +999,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+
+<footer style="background:#020E1E !important;padding:30px 5% !important;text-align:center !important;border-top:1px solid rgba(255,255,255,0.05) !important;">
+  <p style="color:rgba(255,255,255,0.3) !important;font-size:0.8rem !important;font-family:'Sora',sans-serif !important;margin:0 !important;">© 2026 <span style="color:rgba(255,255,255,0.3) !important;">Rishabh Saxena</span> · rishabhsaxena.co.in</p>
+</footer>
+
 <!-- MODAL -->
 <div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:2000;align-items:center;justify-content:center;">
   <div style="background:var(--sf-card);border-radius:20px;padding:40px;max-width:480px;width:90%;text-align:center;position:relative;">
@@ -999,7 +1011,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div style="font-size:2.5rem;margin-bottom:16px;">🔬</div>
     <h3 style="font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:800;margin-bottom:10px;">In the Making</h3>
     <p style="color:var(--sf-subtext);font-size:0.9rem;line-height:1.7;margin-bottom:20px;">A few tools are quietly being built. Nothing to announce just yet — but they're coming.</p>
-    <a href="#connect" onclick="event.preventDefault();document.getElementById('connect').scrollIntoView({behavior:'smooth'})"  style="background:var(--sf-blue);color:white;padding:11px 24px;border-radius:8px;text-decoration:none;font-family:'Sora',sans-serif;font-weight:700;font-size:0.88rem;">Stay in the Loop</a>
+    <a href="#connect" style="background:var(--sf-blue);color:white;padding:11px 24px;border-radius:8px;text-decoration:none;font-family:'Sora',sans-serif;font-weight:700;font-size:0.88rem;">Stay in the Loop</a>
   </div>
 </div>
 
@@ -1047,11 +1059,11 @@ const R = {
     "Hi! I'm VE — Virtual Executive. Think of me as Rishabh's always-on assistant. Ask me anything."
   ],
   who: [
-    "Rishabh Saxena is a Salesforce Consultant with nearly a decade in the ecosystem — 5x certified, and currently part of Salesforce's own Professional Services team in India. Before that, he's done presales and consulting at LTIMindtree, Brillio, and TCS. He's also an MBA from Great Lakes, a motorsport enthusiast, and a watch collector. Quite a range, I know.",
-    "Rishabh is a Salesforce Consultant — part of the India PS GTM team. He owns end-to-end presales for Data Cloud, Marketing Cloud, and RCG Cloud. Nearly a decade in the Salesforce ecosystem, 5 certifications, and a genuine belief that most implementations fail not because of bad tech, but because the original problem gets lost. That's the gap he works in."
+    "Rishabh Saxena is a Salesforce Consultant with a decade in the ecosystem — 5x certified, and currently part of Salesforce's own Professional Services team in India. Before that, he's done presales and consulting at LTIMindtree, Brillio, and TCS. He's also an MBA from Great Lakes, a motorsport enthusiast, and a watch collector. Quite a range, I know.",
+    "Rishabh is a Salesforce Consultant — part of the India PS GTM team. He owns end-to-end presales for Data Cloud, Marketing Cloud, and RCG Cloud. A decade in the Salesforce ecosystem, 5 certifications, and a genuine belief that most implementations fail not because of bad tech, but because the original problem gets lost. That's the gap he works in."
   ],
   salesforce: [
-    "Rishabh has been in the Salesforce ecosystem for nearly a decade — across development, presales, consulting, and now engagement management. He's worked across Sales Cloud, Service Cloud, Data Cloud, Marketing Cloud, RCG Cloud, Experience Cloud, and CMS. Currently at Salesforce itself, managing the PS India GTM for Data Cloud, Marketing Cloud, and RCG Cloud.",
+    "Rishabh has been in the Salesforce ecosystem for a decade — across development, presales, consulting, and now engagement management. He's worked across Sales Cloud, Service Cloud, Data Cloud, Marketing Cloud, RCG Cloud, Experience Cloud, and CMS. Currently at Salesforce itself, managing the PS India GTM for Data Cloud, Marketing Cloud, and RCG Cloud.",
     "Salesforce is Rishabh's core domain. He's 5x certified — Data Cloud Consultant, AI Associate, Sales Cloud Consultant, Administrator, and Platform Developer I. He's been a developer, a presales consultant, and now a Salesforce Consultant. He understands the full lifecycle — from discovery to delivery.",
     "If you're looking for Salesforce expertise — Rishabh's been living and breathing it since 2016. He's particularly strong in presales, discovery, and making sure the right problem gets solved before a single line of config is written."
   ],
@@ -1423,11 +1435,5 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
-
-
-<footer>
-  <p>© 2026 <span>Rishabh Saxena</span> · rishabhsaxena.co.in</p>
-</footer>
-
 </body>
 </html>
